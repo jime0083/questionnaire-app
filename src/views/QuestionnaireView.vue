@@ -3,7 +3,15 @@
         <v-row justify="center">
             <v-col cols="12" md="8">
                 <h1>アンケート</h1>
-                <QuestionnaireForm />
+                <QuestionnaireForm @submit-answers="handleSubmit" />
+                <div v-if="submitted">
+                    <h2>回答内容</h2>
+                    <ul>
+                        <li v-for="(answer,index) in answers" :key="index">
+                            {{ answer }}
+                        </li>
+                    </ul>
+                </div>
             </v-col>
         </v-row>
     </v-container>
@@ -15,6 +23,18 @@ import QuestionnaireForm from '../components/QuestionnaireForm.vue'
 export default{
     components:{
         QuestionnaireForm,
+    },
+    data(){
+        return{
+            answers:[],
+            submitted:false,
+        };
+    },
+    methods:{
+        handleSubmit(answers){
+            this.answers=answers;
+            this.submitted=true;
+        }
     }
-}
+};
 </script>
