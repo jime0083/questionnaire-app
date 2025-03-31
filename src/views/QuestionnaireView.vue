@@ -4,7 +4,7 @@
             <v-col cols="12" md="8">
                 <h1>アンケート</h1>
                 <QuestionnaireForm @submit-answers="handleSubmit" />
-                <div v-if="submitted">
+                <div v-show="submitted">
                     <h2>回答内容</h2>
                     <ul>
                         <li v-for="(answer,index) in answers" :key="index">
