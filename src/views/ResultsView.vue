@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import ResultList from '../components/ResultList.vue'
+import ResultList from '../components/ResultList.vue';
 import { computed } from 'vue';
 import { useStore } from 'vuex';
 

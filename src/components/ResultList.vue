@@ -2,7 +2,7 @@
     <v-list>
         <v-list-item>
             <v-list-item-content>
-                <v-list-item-title>質問{{ index +! }}</v-list-item-title>
+                <v-list-item-title>質問{{ index +1 }}</v-list-item-title>
                 <v-list-item-subtitle>{{ answer }}</v-list-item-subtitle>
             </v-list-item-content>
         </v-list-item>
@@ -13,7 +13,7 @@
 export default{
     props:{
         answers:{
-            tyoe:Array,
+            type:Array,
             require:true,
         },
     },
