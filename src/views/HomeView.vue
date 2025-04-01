@@ -10,3 +10,11 @@
         </v-row>
     </v-container>
 </template>
+
+<script>
+export default {
+  mounted() {
+    console.log("✅ HomeView.vue がマウントされました");
+  }
+};
+</script>
