@@ -34,7 +34,12 @@ export default{
         handleSubmit(answers){
             this.answers=answers;
             this.submitted=true;
+            console.log("アンケートが送信されました:", this.answers);
         }
+    },
+    mounted() {
+        console.log("✅ QuestionnaireView.vue がマウントされました！");
+        console.log("質問リスト:", this.questions);
     }
 };
 </script>

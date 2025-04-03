@@ -15,12 +15,12 @@
 export default{
     data(){
         return{
-            question:[
+            questions:[
                 'あなたの名前は？',
                 '好きな食べ物は？',
                 '趣味は？'
             ],
-            answers:[]
+            answers: Array(3).fill('')
         };
     },
 
